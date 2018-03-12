@@ -1,0 +1,15 @@
+@font-face{font-family:"PFSquareSansPro-Bold";src:url("../fonts/PFSquareSansPro-Bold.eot"), url("../fonts/PFSquareSansPro-Bold.woff") format("woff"), url("../fonts/PFSquareSansPro-Bold.ttf") format("truetype"), url("../fonts/PFSquareSansPro-Bold.svg") format("svg");font-weight:100;font-style:normal;}
+@font-face{font-family:"PFSquareSansPro-Light";src:url("../fonts/PFSquareSansPro-Light.eot"), url("../fonts/PFSquareSansPro-Light.woff") format("woff"), url("../fonts/PFSquareSansPro-Light.ttf") format("truetype"), url("../fonts/PFSquareSansPro-Light.svg") format("svg");font-weight:100;font-style:normal;}
+@font-face{font-family:"PFSquareSansPro-LightItalic";src:url("../fonts/PFSquareSansPro-LightItalic.eot"), url("../fonts/PFSquareSansPro-LightItalic.woff") format("woff"), url("../fonts/PFSquareSansPro-LightItalic.ttf") format("truetype"), url("../fonts/PFSquareSansPro-LightItalic.svg") format("svg");font-weight:100;font-style:normal;}
+@font-face{font-family:"PFSquareSansPro-Medium";src:url("../fonts/PFSquareSansPro-Medium.eot"), url("../fonts/PFSquareSansPro-Medium.woff") format("woff"), url("../fonts/PFSquareSansPro-Medium.ttf") format("truetype"), url("../fonts/PFSquareSansPro-Medium.svg") format("svg");font-weight:100;font-style:normal;}
+@font-face{font-family:"PFSquareSansPro-Regular";src:url("../fonts/PFSquareSansPro-Regular.eot"), url("../fonts/PFSquareSansPro-Regular.woff") format("woff"), url("../fonts/PFSquareSansPro-Regular.ttf") format("truetype"), url("../fonts/PFSquareSansPro-Regular.svg") format("svg");font-weight:100;font-style:normal;}
+@font-face{font-family:"PFSquareSansPro-XBlack";src:url("../fonts/PFSquareSansPro-XBlack.eot"), url("../fonts/PFSquareSansPro-XBlack.woff") format("woff"), url("../fonts/PFSquareSansPro-XBlack.ttf") format("truetype"), url("../fonts/PFSquareSansPro-XBlack.svg") format("svg");font-weight:100;font-style:normal;}
+@font-face{font-family:"PFSquareSansPro-Italic";src:url("../fonts/PFSquareSansPro-Italic.eot"), url("../fonts/PFSquareSansPro-Italic.woff") format("woff"), url("../fonts/PFSquareSansPro-Italic.ttf") format("truetype"), url("../fonts/PFSquareSansPro-Italic.svg") format("svg");font-weight:100;font-style:normal;}
+@font-face{font-family:"jaznb";src:url("../fonts/jaznb.eot"), url("../fonts/jaznb.woff") format("woff"), url("../fonts/jaznb.ttf") format("truetype"), url("../fonts/jaznb.svg") format("svg");font-weight:100;font-style:normal;}
+@font-face {
+    font-family: 'NarFont';
+    src: url('../fonts/narfont.otf');
+    src: local('☺'), url('../fonts/narfont.eot') format('eot'), url('../fonts/narfont.woff') format('woff'), url('../fonts/narfont.ttf') format('truetype'), url('../fonts/narfont.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}

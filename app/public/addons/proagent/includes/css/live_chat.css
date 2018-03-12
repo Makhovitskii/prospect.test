@@ -1,0 +1,317 @@
+/* Live Chat */
+
+@font-face {
+    font-family: 'Book';
+    src: url('../fonts/f_book.eot');
+    src: url('../fonts/f_book.eot') format('embedded-opentype'),
+         url('../fonts/f_book.ttf') format('truetype'),
+         url('../fonts/f_book.svg#FuturaStdBook') format('svg');
+}
+
+#popup_contact { position: fixed; right: 20px; bottom: 0px; z-index: 999999; }
+#popup_contact > a { display: block; width: 45px; height: 45px; line-height: 43px; font-size: 20px; text-align: center; }
+#popup_contact > a:hover { text-decoration: none; }
+#popup_contact .popup_contact_wrapper_chat { width: 263px; padding: 7px; background-color: #F1F1FA; position: absolute; bottom: 0px; right: 0; display: block; border: 1px solid #00bc87; border-bottom: 0px; border-radius: 7px 7px 0px 0px; }
+#popup_contact.focus .popup_contact_wrapper_chat { display: block; }
+#popup_contact .popup_contact_wrapper_chat span.arrow { position: absolute; right: 15px; bottom: -8px; margin: 0 auto; width: 0px; height: 0px; display: block; border-top: 8px solid #fbfbfb; border-right: 8px solid transparent; border-left: 8px solid transparent; }
+
+#popup_contact .popup_contact_wrapper_chat form {}
+#popup_contact .popup_contact_wrapper_chat form input[type="text"], #popup_contact .popup_contact_wrapper_chat form input[type="email"], #popup_contact .popup_contact_wrapper_chat form textarea { background: #fff; margin-bottom: 10px;  }
+#popup_contact .popup_contact_wrapper_chat form textarea { resize:vertical; min-height: 100px; }
+#popup_contact .popup_contact_wrapper_chat form input[type="submit"] { margin: 0; float: right; }
+
+#popup_contact .wpcf7-form.invalid > p:after { display: block; }
+#popup_contact .wpcf7-form-control-wrap { display: inline-block; margin-right: 0; padding: 5px 5px 0; background-color: #FFFFFF; }
+#popup_contact div.wpcf7 img.ajax-loader { margin-top: 10px; }
+
+.wpcf-lic-corp { font-family: 'Segoe UI';display: block;text-align: right;font-size: 10px;padding: 2px 6px; }
+
+/* LIve Chat Box
+=====================================================*/
+
+#live_chat_main
+{
+    box-shadow: 0px 3px 8px 1px #000;
+}
+.live_chat_image
+{
+    overflow: hidden;
+    border-radius: 25px;
+    float: left;
+    height: 44px;
+}
+.live_chat_names
+{
+    float: left;
+    height: 19px;
+    padding: 0px 0 0 8px;
+    width: 248px;
+    text-align: right;
+}
+.live_chat_names p,
+.live_chat_names h5,
+.live_chat_names a,
+.live_chat_names a:hover,
+.live_chat_names a:active
+{
+    font-family: 'Book', arial;
+    margin: 0;
+    padding: 0px 10px 0px 10px;
+    color: rgba(31, 31, 31, 0.6);
+    font-size: 12px;
+    font-weight: 400;
+}
+.live_chat_names p
+{
+    color:#7D7D7D;
+    font-size:12px;
+    font-style: italic;
+    font-family: 'Book', arial;
+}
+.live_chat_message_box
+{
+    height: 300px;
+    background-color: #FFFFFF;
+    padding-left: 7px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.live_chat_close
+{
+    float: right;
+    cursor: pointer;
+}
+.live_chat_tray
+{
+    position: relative;
+    margin-right: 8px;
+    margin-top: 2px;
+    float: right;
+    cursor: pointer;
+}
+.live_chat_operator_info
+{
+    background-color: #FDFDFD;
+    height: 24px;
+    padding: 5px;
+}
+.live_chat_line
+{
+    height: 1px;
+    background-color: #6E6E6E;
+    margin: 0 auto;
+    width: 238px;
+}
+.chat_writing {
+    position: absolute;
+    bottom: 58px;
+    background-color: #DDD;
+    border-radius: 5px;
+    padding: 2px 8px;
+    right: 12px;
+    font-size: 11px;
+    font-style: italic;
+}
+.live_chat_logo {
+    position: absolute;
+    top: -26px;
+    left: 0px;
+    background-color: #F1F1FA;
+    width: 232px;
+    height: 50px;
+    padding: 15px;
+    box-sizing: border-box;
+}
+.live_chat_logo img {
+    width: 130px;
+    margin-top: 4px;
+}
+.live_chat_triangle {
+    height: 30px;
+    width: 30px;
+    background: url(../img/triangleg.png) no-repeat;
+    position: absolute;
+    top: -27px;
+    right: 0;
+}
+.live_chat_input
+{
+    width: 239px;
+    border: 1px solid #6E6E6E;
+    padding: 10px;
+    outline: none;
+    margin: 0;
+    max-width: 100%;
+    display: block;
+    font-size: 15px;
+    font-family: 'Book', arial;
+    line-height: 19px;
+}
+.msg-container {
+    position: relative;
+    margin-bottom: 10px;
+    max-width: 170px;
+    width: 100%;
+    padding: 4px 8px 2px 7px;
+    -webkit-border-radius: 13px;
+    -moz-border-radius: 13px;
+    -khtml-border-radius: 13px;
+    -ms-border-radius: 13px;
+    -o-border-radius: 13px;
+    border-radius: 13px;
+    margin-top: 10px;
+    box-shadow: -1px 7px 25px -12px rgba(0,0,0,1);
+
+}
+.msg-container.agentMessage {
+    float:left;
+    margin-left:5px;
+    background:#8852B2;
+    color:#fff;
+    text-align:left;
+    line-height:16px;
+    word-wrap: break-word;
+}
+.msg-container.clientMessage {
+    float: right;
+    background-color: #e8e8e8;
+    color: #5A4089;
+    margin-right: 15px;
+    text-align: right;
+    line-height: 16px;
+    word-wrap: break-word;
+}
+.agentMessage div.new-time {
+    right: -40px;
+    top: 50%;
+}
+
+.clientMessage div.new-time {
+    left: -44px;
+    top: 50%;
+}
+.pip{
+    position: absolute;
+    bottom: 0;
+    width: 12px;
+    height: 12px;
+    background-repeat: no-repeat;
+}
+.clientMessage div.pip{
+    background-image: url("../img/carrow.png");
+    background-position: 100% 100%;
+    background-repeat: no-repeat;
+    right: -5px;
+}
+.agentMessage div.pip{
+    background-image: url("../img/rarrow.png");
+    background-position: 100% 100%;
+    background-repeat: no-repeat;
+    left: -5px;
+}
+.new-time{
+    line-height: 0;
+    position: absolute;
+    font-size: 11px;
+    color: #bbb;
+    font-family: 'Book', arial;
+}
+.new-msg-text{
+    font-family: 'PFS', arial;
+    font-size: 14px;
+    margin: 4px 4px 4px;
+}
+
+.msg-input
+{
+    width: 237px;
+    border: 1px solid #00bc87;
+    padding: 10px;
+    font-family: 'Book', arial;
+    outline: none;
+    margin: 0;
+    max-width: 100%;
+    display: block;
+    font-size: 13px;
+    border-bottom-width: 1px;
+    border-style: solid;
+    height: 40px !important;
+}
+
+.gradient_text
+{
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#8852B2+0,ff9191+100 */
+    background: #8852B2; /* Old browsers */
+    background: -moz-linear-gradient(45deg,  #8852B2 0%, #ff9191 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,#8852B2), color-stop(100%,#ff9191)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(45deg,  #8852B2 0%,#ff9191 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(45deg,  #8852B2 0%,#ff9191 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(45deg,  #8852B2 0%,#ff9191 100%); /* IE10+ */
+    background: linear-gradient(45deg,  #8852B2 0%,#ff9191 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8852B2', endColorstr='#ff9191',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+
+    -o-background-clip: text;
+    -o-text-fill-color: transparent;
+
+    -ms-background-clip: text;
+    -ms-text-fill-color: transparent;
+}
+
+.chat_box_b
+{
+    text-align: center !important;
+    font-weight: bold !important;
+    height: 30px !important;
+    line-height: 36px !important;
+    float: none !important;
+    margin: 0 auto !important; }
+
+.slider_box_m
+{
+    position: relative;
+    top: -58px;
+    z-index: 99;
+    height: 58px;
+    float: right;
+}
+
+.slider_right_box
+{
+    width:20%;
+    float:right;
+    height: 404px;
+}
+.slider_box_c
+{
+    width: 175px;
+    height: 58px;
+    line-height: 59px;
+    box-sizing: border-box;
+    color: #00bc87;
+    cursor: pointer;
+}
+
+.slider_box_r
+{
+    width: 200px;
+    height: 60px;
+    line-height: 16px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+.slider_box_text { height: 325px; padding: 80px 37px 0 36px; box-sizing: border-box; }
+
+.slider_box_text h4 { color: #1F1F1F; font-weight: 300; margin-bottom: 20px; }
+
+.slider_box_text p { font-size: 15px; line-height: 13px; padding-top: 9px; text-align: center; font-family: 'Book', arial; }
+
+.gradient_green { color:#ffffff; background: #44bc8d !important; background: -moz-linear-gradient(-45deg,  #44bc8d 0%, #a9d465 100%) !important; background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#44bc8d), color-stop(100%,#a9d465)) !important; background: -webkit-linear-gradient(-45deg,  #44bc8d 0%,#a9d465 100%) !important; background: -o-linear-gradient(-45deg,  #44bc8d 0%,#a9d465 100%) !important; background: -ms-linear-gradient(-45deg,  #44bc8d 0%,#a9d465 100%) !important; background: linear-gradient(135deg,  #44bc8d 0%,#a9d465 100%) !important; filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#44bc8d', endColorstr='#a9d465',GradientType=1 ) !important; }
